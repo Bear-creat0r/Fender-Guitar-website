@@ -8,7 +8,6 @@
   --serif: "Georgia", "Times New Roman", serif;
   --sans: "Helvetica Neue", Arial, sans-serif;
 }
-
 * {
   box-sizing: border-box;}
 body 
@@ -67,20 +66,17 @@ h2, h3
   color: var(--accent);
 }
 p {
-  color: var(--muted);
-}
-
+  color: var(--muted);}
 section {
-  margin-bottom: 40px;
-}
-
-img {
+  margin-bottom: 40px;}
+img 
+{
   max-width: 100%;
   border-radius: 6px;
   border: 1px solid rgba(255,255,255,0.15);
 }
-
-footer {
+footer 
+{
   text-align: center;
   padding: 20px;
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -88,34 +84,34 @@ footer {
   color: var(--muted);
 }
 
-.gallery {
+.gallery 
+{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.card {
+.card 
+{
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 8px;
   padding: 16px;
 }
 
-.card h3 {
+.card h3 
+{
   margin-top: 0;
   color: var(--link);
 }
 
-.timeline {
+.timeline
+{
   border-left: 2px solid var(--accent);
   padding-left: 20px;
 }
-
 .timeline p {
-  margin: 8px 0;
-}
-
-/* Vintage paper effect for sections */
+  margin: 8px 0;}
 .vintage-bg {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
   padding: 20px;
