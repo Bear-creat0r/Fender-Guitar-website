@@ -1,0 +1,107 @@
+:root {
+  --bg: #0f1115;
+  --card: #171a21;
+  --text: #e6e8ed;
+  --muted: #a8adb7;
+  --accent: #ffcc00;   /* Fender vibe */
+  --border: #242a33;
+  --shadow: 0 10px 25px rgba(0,0,0,0.35);
+  --radius: 14px;
+  --gap: 1rem;
+  --maxw: 1200px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, #0b0d11 0%, #12151c 100%);
+  color: var(--text);
+}
+
+.page {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.brand__dot {
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(255, 204, 0, 0.1);
+}
+
+.brand__title {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin: 0;
+  font-size: 1.65rem;
+}
+
+.filter {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.chip {
+  background: #141820;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+  outline: none;
+}
+.chip:hover { color: var(--text); border-color: #2c3542; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+}
+
+/* Responsive columns */
+@media (max-width: 600px) {
+  .grid { grid-template-columns: repeat(6, 1fr); }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .grid { grid-template-columns: repeat(8, 1fr); }
+}
+
+.card {
+  grid-column: span 4; /* 3 per row on desktop */
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+/* Tablet: 2 per row */
+@media (min-width: 601px) and (max-width: 900px) {
+  .card { grid-column: span 4; }
+}
+/* Mobile: full-width */
+@media (max-width: 600px) {
+  .card { grid-column: span 6; }
+}
